@@ -1,0 +1,23 @@
+{
+  "name": "tablelist",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "王婷婷 <wangtingting@jxhsja.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/tableList.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/wttwhite/plug-in-set.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/tableList.test.js"
+  }
+}
