@@ -13,6 +13,7 @@ module.exports = {
       // { text: 'Home', link: '/' },
       { text: '布局', link: '/layout/pageListBox' },
       { text: '组件', link: '/fontcom/pagination' },
+      { text: '代码库demo', link: '/demo/superslide' },
       { text: 'util', link: '/util/' },
     ],
     sidebar: {
@@ -35,6 +36,17 @@ module.exports = {
           children: [
             'ellipsis',
             'pagination'
+          ]
+        }
+      ],
+      '/demo/': [
+        {
+          collapsable: false,
+          children: [
+            'superslide',
+            'screenfull',
+            'pie3d',
+            'hyjz'
           ]
         }
       ]
