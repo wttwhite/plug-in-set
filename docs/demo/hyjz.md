@@ -2,7 +2,6 @@
 
 [代码仓库](http://192.168.1.13/hsja/development/project/public-security/hy/hyqyfx/web/-/blob/master/src/views/NewPage.vue)
 
-<img src='./img/hyjz.png'/>
 
 **注：**
 **中间地图是视频 + div定位轮询**

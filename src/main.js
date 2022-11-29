@@ -3,9 +3,11 @@ import VueRouter from 'vue-router'
 import App from './App.vue'
 import routes from './router'
 import ellipsis from '../packages/ellipsis/lib/index.esm'
+import elementUi from 'element-ui'
 
 Vue.use(VueRouter)
 Vue.use(ellipsis)
+Vue.use(elementUi)
 
 const router = new VueRouter({
   base: '/',

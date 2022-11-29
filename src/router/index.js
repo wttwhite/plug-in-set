@@ -11,9 +11,18 @@ const routes = [
     component: () => import('@/views/test'),
     meta: {
       title: 'test',
-      isMenu: true
+      isMenu: true,
     },
-  }
+  },
+  {
+    path: '/utils',
+    name: 'utils',
+    component: () => import('@/views/utils'),
+    meta: {
+      title: 'utils',
+      isMenu: true,
+    },
+  },
 ]
 
 export default routes

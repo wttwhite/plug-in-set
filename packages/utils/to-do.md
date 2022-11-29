@@ -1,4 +1,4 @@
-* [ ] ip地址判断
+* [X] ip地址判断
 * [X] addclass
 * [X] remove class
 * [X] toggleclass
