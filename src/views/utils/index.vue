@@ -10,6 +10,7 @@ import {
   getWeather,
   hideSensitiveText,
   getOrigin,
+  checkIDStrict,
 } from '../../../packages/utils/lib/index.esm'
 export default {
   name: 'utils',
@@ -22,7 +23,7 @@ export default {
     // toggleClass(this.$refs.utilsDom, 'b')
     // console.log(getWeather())
     console.log(hideSensitiveText('330480184578523698', 5, 14))
-    console.log(getOrigin())
+    console.log(checkIDStrict('330480182512124755'))
   },
 }
 </script>

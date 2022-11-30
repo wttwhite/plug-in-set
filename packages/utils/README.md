@@ -5,7 +5,6 @@
 ## Usage
 
 ```
-const utils = require('utils');
-
-// TODO: DEMONSTRATE API
+npm i hsja-utils -D
+imgport { xxx } from 'hsja-utils'
 ```

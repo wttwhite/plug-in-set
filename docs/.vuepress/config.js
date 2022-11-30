@@ -14,7 +14,7 @@ module.exports = {
       { text: '布局', link: '/layout/pageListBox' },
       { text: '组件', link: '/fontcom/pagination' },
       { text: '代码库demo', link: '/demo/superslide' },
-      { text: 'utils', link: '/utils/dom' },
+      { text: 'utils', link: '/utils/function' },
     ],
     sidebar: {
       //对象的默认路径

@@ -10,6 +10,7 @@
 @return 是否存在入参的classname  true/false
 
 ```javascript
+import { hasClass } from 'hsja-utils'
 <div ref="utilsDom" class="a"></div>
 hasClass(this.$refs.utilsDom, 'a')   // true
 ```
@@ -24,6 +25,7 @@ hasClass(this.$refs.utilsDom, 'a')   // true
 @return  无
 
 ```javascript
+import { addClass } from 'hsja-utils'
 addClass(this.$refs.utilsDom, 'b') // 增加单个样式
 addClass(this.$refs.utilsDom, 'c d') // 增加多个样式
 ```
@@ -38,6 +40,7 @@ addClass(this.$refs.utilsDom, 'c d') // 增加多个样式
 @return  无
 
 ```javascript
+import { removeClass } from 'hsja-utils'
 removeClass(this.$refs.utilsDom, 'b') // 删除单个样式
 removeClass(this.$refs.utilsDom, 'c d') // 删除多个样式
 ```
@@ -52,6 +55,7 @@ removeClass(this.$refs.utilsDom, 'c d') // 删除多个样式
 @return  无
 
 ```javascript
+import { toggleClass } from 'hsja-utils'
 <div ref="utilsDom" class="a"></div>
 toggleClass(this.$refs.utilsDom, 'a') // 删除a
 toggleClass(this.$refs.utilsDom, 'b') // 增加a

@@ -1,8 +1,18 @@
 vuepress 的样式覆盖了element的样式
 
-table 
+table
   margin 0
 tr 
   border-top none
 th, td
   border none
+
+theme-default-content > table 
+  border-top: 1px solid #EBEEF5
+  border-left: 1px solid #EBEEF5
+
+theme-default-content > table tr 
+  border-bottom 1px solid #EBEEF5
+  
+theme-default-content > table th, theme-default-content > table td
+  border-right 1px solid #EBEEF5

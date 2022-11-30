@@ -7,6 +7,7 @@ import debounce from './function/debounce'
 import getOrigin from './function/get-origin'
 import hideSensitiveText from './function/hide-sensitive-text'
 import throttle from './function/throttle'
+import checkIDStrict from './function/check-id-strict'
 
 import regExp from './reg-exp/reg-exp'
 
@@ -21,6 +22,7 @@ export {
   getOrigin,
   hideSensitiveText,
   throttle,
+  checkIDStrict,
   regExp,
   getWeather,
 }
