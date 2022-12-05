@@ -2,6 +2,14 @@ module.exports = {
   title: 'test', // 网站标题
   base: '/plug-in-set/',
   description: '网站的描述，它将会以 <meta> 标签渲染到当前页面的 HTML 中',
+  plugins: [
+    [
+      '@vuepress/search',
+      {
+        searchMaxSuggestions: 10,
+      },
+    ],
+  ],
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }], // 标签页的icon
   ],
