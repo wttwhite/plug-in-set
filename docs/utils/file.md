@@ -15,6 +15,8 @@ downloadFile(res, fileName)
 
 ## 下载文件通过url
 
+主要用于前端或者后端存储的静态文件的下载
+
 ```javascript
 import { dowloadByUrl} from 'hsja-utils'
 downloadFile(str, fileName)

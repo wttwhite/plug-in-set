@@ -55,6 +55,10 @@ module.exports = {
         },
         {
           collapsable: false,
+          children: ['file'],
+        },
+        {
+          collapsable: false,
           children: ['dom'],
         },
         {
