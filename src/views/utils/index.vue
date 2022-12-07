@@ -11,6 +11,8 @@
       <img v-if="imageUrl" :src="imageUrl" class="avatar" />
       <i v-else class="el-icon-plus avatar-uploader-icon"></i>
     </el-upload>
+    <img :src="fileZipImg"/>
+    <video :src="fileZipImg"/>
   </div>
 </template>
 <script>
@@ -27,11 +29,15 @@
 import compressImg from '../../../packages/utils/src/file/compress-img'
 
 import ImageCompressor from 'js-image-compressor'
+
+import JSZip from 'jszip'
+import axios from 'axios'
 export default {
   name: 'utils',
   data() {
     return {
       imageUrl: '',
+      fileZipImg: ''
     }
   },
   mounted() {
@@ -44,6 +50,7 @@ export default {
     // console.log(getWeather())
     // console.log(hideSensitiveText('330480184578523698', 5, 14))
     // console.log(checkIDStrict('330480182512124755'))
+    this.testZip()
   },
   methods: {
     beforeAvatarUpload(file) {
@@ -80,6 +87,39 @@ export default {
         }
       })
     },
+    async testZip(){
+      const zip = new JSZip()
+      const file = await axios.get('/test-zip.zip', {responseType: 'blob'} )
+      console.log('file', file)
+      zip.loadAsync(file.data).then(async (res) => {
+        console.log(res.files)
+        // const base64 = await res.file('test-zip/daping.png').async('string')
+        const blob = await res.file('test-zip/daping.png').async('blob')
+        // const base64 = await res.file('test-zip/daping.png').asText()
+        // const buffer = await res.file('test-zip/daping.png').asArrayBuffer()
+        // return res.file()
+        // let base64 = this.arrayBufferToBase64(buffer)
+        // base64 = 'data:image/png;base64,' + base64
+        // console.log(base64)
+        const read = new FileReader()
+        read.readAsDataURL(blob)
+        // read.readAsDataURL(new Blob([base64], { type: base64.type }))
+        read.onload = (e) => {
+          const img = new Image()
+          img.src = e.target.result
+          this.fileZipImg = img.src
+        }
+      })
+    },
+    arrayBufferToBase64( buffer ) { 
+      var binary = '';  
+      var bytes = new Uint8Array( buffer );  
+      var len = bytes.byteLength;  
+      for (var i = 0; i < len; i++) { 
+          binary += String.fromCharCode( bytes[ i ] );  
+      } 
+      return window.btoa( binary );  
+  }
   },
 }
 </script>

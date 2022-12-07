@@ -1,6 +1,6 @@
 {
   "name": "hsja-utils",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "description": "> TODO: description",
   "author": "wtt",
   "homepage": "",
@@ -20,5 +20,8 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "peerDependencies": {
+    "jszip": "^3.10.1"
   }
 }

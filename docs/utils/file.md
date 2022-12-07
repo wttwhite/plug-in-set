@@ -9,8 +9,10 @@
 一般用于后端接口返回二进制码流，然后下载
 
 ```javascript
+// 接口中记得加responseType: 'blob'
 import { downloadFile } from 'hsja-utils'
-downloadFile(res, fileName)
+downloadFile(data, fileName)
+downloadFile(data) // 不传fileName，默认使用后端headers中给的filename的值
 ```
 
 ## 下载文件通过url
