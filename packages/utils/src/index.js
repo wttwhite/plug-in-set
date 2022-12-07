@@ -3,6 +3,10 @@ import hasClass from './dom/has-class'
 import removeClass from './dom/remove-class'
 import toggleClass from './dom/toggle-class'
 
+import downloadFileByUrl from './file/download-file-byurl'
+import downloadFile from './file/download-file'
+import compressImg from './file/compress-img'
+
 import debounce from './function/debounce'
 import getOrigin from './function/get-origin'
 import hideSensitiveText from './function/hide-sensitive-text'
@@ -18,6 +22,9 @@ export {
   hasClass,
   removeClass,
   toggleClass,
+
+  downloadFileByUrl, downloadFile, compressImg,
+
   debounce,
   getOrigin,
   hideSensitiveText,

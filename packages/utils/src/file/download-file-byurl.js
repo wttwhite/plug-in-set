@@ -1,6 +1,6 @@
 //引入js文件代码
 // 文件下载ppt,xls,word
-export function dowloadByUrl(str, fileName) {
+export default function dowloadByUrl(str, fileName) {
   //   let that = this
   getBlob(str, function (blob) {
     saveAs(blob, fileName)
