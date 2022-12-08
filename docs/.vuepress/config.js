@@ -51,6 +51,10 @@ module.exports = {
       '/utils/': [
         {
           collapsable: false,
+          children: ['changelog'],
+        },
+        {
+          collapsable: false,
           children: ['function'],
         },
         {

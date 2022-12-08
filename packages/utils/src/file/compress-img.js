@@ -3,7 +3,7 @@
  */
 export default function compressImg(
   file,
-  scale = 2,
+  scale = 0.5,
   encoderOptions = {
     '<1': 1,
     '1-2': 0.5,
@@ -32,8 +32,8 @@ export default function compressImg(
         img.onload = function () {
           console.log('this.width', this.width)
           console.log('this.height', this.height)
-          let w = Math.floor(this.width / scale),
-            h = Math.floor(this.height / scale)
+          let w = Math.floor(this.width * scale),
+            h = Math.floor(this.height * scale)
           const canvas = document.createElement('canvas')
           const ctx = canvas.getContext('2d')
           let base64
@@ -41,19 +41,19 @@ export default function compressImg(
           canvas.setAttribute('height', h)
           ctx.drawImage(this, 0, 0, w, h)
           console.log('w, h', w, h)
-          // if (fileSize < 1) {
-          //   // 如果图片小于一兆 那么不执行压缩操作
-          //   // type：图片格式，默认为 image/png,可以是其他image/jpeg等
-          //   // encoderOptions：0到1之间的取值，主要用来选定图片的质量，默认值是0.92，超出范围也会选择默认值。
-          //   // 这个我没看出来效果有啥不一样
-          //   base64 = canvas.toDataURL(disposeFile['type'], 1)
-          // } else if (fileSize > 1 && fileSize < 2) {
-          //   // 如果图片大于1M并且小于2M 那么压缩0.5
-          //   base64 = canvas.toDataURL(disposeFile['type'], 0.5)
-          // } else {
-          //   // 如果图片超过2m 那么压缩0.2
-          //   base64 = canvas.toDataURL(disposeFile['type'], 0.2)
-          // }
+          if (fileSize < 1) {
+            // 如果图片小于一兆 那么不执行压缩操作
+            // type：图片格式，默认为 image/png,可以是其他image/jpeg等
+            // encoderOptions：0到1之间的取值，主要用来选定图片的质量，默认值是0.92，超出范围也会选择默认值。
+            // 这个我没看出来效果有啥不一样
+            base64 = canvas.toDataURL(disposeFile['type'], 1)
+          } else if (fileSize > 1 && fileSize < 2) {
+            // 如果图片大于1M并且小于2M 那么压缩0.5
+            base64 = canvas.toDataURL(disposeFile['type'], 0.5)
+          } else {
+            // 如果图片超过2m 那么压缩0.2
+            base64 = canvas.toDataURL(disposeFile['type'], 0.2)
+          }
           const keys = Object.keys(encoderOptions)
           if (keys.length) {
             keys.forEach
